@@ -20,7 +20,7 @@ mongoose.connect("mongodb://localhost/myscrapedb");
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  console.log('Connected to Mongoose!')
+  console.log('Connected!')
 });
 
 require("./routes/api-routes.js")(app);
